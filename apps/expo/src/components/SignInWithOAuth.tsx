@@ -16,7 +16,7 @@ const SignInWithOAuth = () => {
       });
 
       await signIn.create({
-        strategy: "oauth_discord",
+        strategy: "oauth_google",
         redirectUrl,
       });
 

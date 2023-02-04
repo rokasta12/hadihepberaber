@@ -82,7 +82,9 @@ export const HomeScreen = () => {
         <Text className="mx-auto pb-2 text-5xl font-bold text-white">
           Create <Text className="text-[#cc66ff]">T3</Text> Turbo
         </Text>
-
+        <Text className="mx-auto pb-2 text-5xl font-bold text-white">
+          Create <Text className="text-[#cc66ff]">T3</Text> Turbo
+        </Text>
         <View className="py-2">
           {showPost ? (
             <Text className="text-white">

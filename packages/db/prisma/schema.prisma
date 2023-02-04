@@ -11,7 +11,26 @@ datasource db {
 }
 
 model Post {
-    id      String @id @default(cuid())
+    id      String    @id @default(cuid())
     title   String
     content String
+    price   Int
+    images  Image[]
+    Auction Auction[]
+}
+
+model Image {
+    id      String @id @default(cuid())
+    url     String
+    product Post   @relation(fields: [postId], references: [id])
+    postId  String
+}
+
+model Auction {
+    id            String @id @default(cuid())
+    title         String
+    total_count   Int
+    current_count Int
+    product       Post   @relation(fields: [postId], references: [id])
+    postId        String
 }
